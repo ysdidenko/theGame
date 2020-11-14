@@ -1,0 +1,7 @@
+{
+  "name": "thegame",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
