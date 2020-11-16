@@ -1,0 +1,73 @@
+ion-content {
+  //--background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+  --background: #1d1d1d;
+}
+.bg {
+  height: 60vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 20vh;
+  z-index: -1;
+
+  img {
+    animation: slide-bg 70s linear infinite;
+    display: block;
+    width: 3.7 * 60vh;
+    max-width: 3.7 * 60vh;
+    height: 60vh;
+  }
+}
+
+.menu {
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+
+  .holder {
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  ion-button {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-family: "Kanit";
+  }
+}
+
+.title {
+  box-sizing: border-box;
+  padding-top: 3vh;
+  font-size: 13vw;
+  line-height: 6vh;
+  height: 20vh;
+  color: #b73f41;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-family: "Kanit";
+
+  small {
+    color: white;
+  }
+}
+
+@keyframes slide-bg {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+}
+
+app-revolver {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
