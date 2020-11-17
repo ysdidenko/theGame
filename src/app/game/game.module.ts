@@ -2,6 +2,9 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule, Routes } from "@angular/router";
 import { LevelComponent } from "./level/level.component";
+import { SharedModule } from "../shared/shared.module";
+import { LoaderComponent } from "./loader/loader.component";
+import { IonicModule } from "@ionic/angular";
 
 const routes: Routes = [
   {
@@ -11,7 +14,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [LevelComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  declarations: [LevelComponent, LoaderComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+    IonicModule,
+  ],
 })
 export class GameModule {}

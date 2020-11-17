@@ -1,13 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import {
   trigger,
   state,
   style,
   animate,
   transition,
-  query,
-  stagger,
 } from "@angular/animations";
+import { Category } from "../shared/models";
 
 @Component({
   selector: "app-revolver",
@@ -27,20 +26,23 @@ import {
   ],
 })
 export class RevolverComponent implements OnInit {
-  bullets = [];
   angle = 0;
+  bullets: Category[] = [];
+  @Input() autoAnimate: boolean;
 
   ngOnInit() {
-    this.animate();
+    if (this.autoAnimate) {
+      this.animate();
+    }
   }
 
   animate() {
     setInterval(() => this.addOneBullet(), 1500);
   }
 
-  addOneBullet() {
+  addOneBullet(category?: Category) {
     if (this.bullets.length < 6) {
-      this.bullets.push("x");
+      this.bullets.push(category);
     } else {
       this.bullets = [];
     }

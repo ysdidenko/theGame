@@ -1,0 +1,27 @@
+ion-content {
+  --background: #1d1d1d;
+}
+.bg {
+  height: 60vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 20vh;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 3.7 * 60vh;
+    max-width: 3.7 * 60vh;
+    height: 60vh;
+  }
+}
+
+app-loader {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.container {
+  padding: 20px;
+}

@@ -1,0 +1,4 @@
+<h2>Load the barrel</h2>
+<ion-button  color="secondary" *ngFor="let category of categories" [disabled]="!category.opened" (click)="selectCategory.emit(category)">
+ {{category.name}}<ion-icon *ngIf="!category.opened" slot="end" name="lock-closed"></ion-icon>
+</ion-button>

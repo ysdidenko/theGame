@@ -1,3 +1,6 @@
+:host {
+  display: block;
+}
 .holder {
   position: relative;
   width: 80%;
@@ -18,7 +21,7 @@
     text-align: center;
     font-weight: bold;
     font-family: "Kanit";
-    font-size: 8vw;
+    font-size: 7vw;
     transition: transform 1s ease-out;
     &.angle-1 {
       transform: rotate(60deg);
@@ -73,5 +76,10 @@
       top: 29.5%;
       left: 28.3%;
     }
+  }
+
+  ion-icon {
+    display: inline-block;
+    vertical-align: middle;
   }
 }

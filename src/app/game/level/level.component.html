@@ -1,3 +1,21 @@
-<p>
-  level works!
-</p>
+
+<ion-content [fullscreen]="true">
+
+  <div [@revolverState]="isLoaderOpened"></div>
+  <div slot="fixed">
+   
+    <app-loader @loaderState *ngIf="isLoaderOpened" (selectCategory)="selectCategory($event)"></app-loader>
+  </div>
+  <app-revolver @fadeIn ></app-revolver>
+    
+  
+          <div class="container">
+            <ion-button *ngIf="isShootVisible" expand="block" color="secondary" size="large" (click)="shoot()">
+              SHOOT!
+             </ion-button>
+          </div>
+
+    <div class="bg" >
+      <img src="/assets/img/bg.jpg">
+    </div>
+</ion-content>

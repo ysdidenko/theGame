@@ -1,6 +1,8 @@
 <div class="holder" [@rotation]='angle'>
   <img  src="./assets/img/barrel.svg">
   <div [ngClass]="'bullet bullet-' + (i+1)" *ngFor="let bullet of bullets; let i = index">
-    <div  [ngClass]="'bullet-holder angle-'+ angle">?</div>
+    <div  [ngClass]="'bullet-holder angle-'+ angle">
+      <ion-icon [name]="bullet?.icon || 'help'"></ion-icon>
+      </div>
   </div>
 </div>

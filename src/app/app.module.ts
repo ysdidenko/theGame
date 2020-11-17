@@ -11,9 +11,10 @@ import { AppRoutingModule } from "./app.routing.module";
 import { MenuComponent } from "./menu/menu.component";
 import { RevolverComponent } from "./revolver/revolver.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, RevolverComponent],
+  declarations: [AppComponent, MenuComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedModule,
   ],
   providers: [
     StatusBar,
